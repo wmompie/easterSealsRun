@@ -1,0 +1,57 @@
+#mainNavbar {
+  font-size: 1.5rem;
+  background-color: #f89603;
+}
+
+/* #mainNavbar .nav-link {
+  color: white;
+} */
+
+#mainNavbar .nav-link:hover {
+  color: white;
+}
+
+.jumbotron h1,
+h2,
+h3 {
+  color: #f89603;
+}
+
+#mainHeading {
+  font-weight: 400;
+}
+
+.card-title {
+  color: #ce4b03;
+}
+
+.bg-orange {
+  background-color: #ce4b03;
+  color: #f7f7f7;
+}
+
+.bg-orange:hover {
+  background-color: white;
+  border: 1px solid #ce4b03;
+  color: #ce4b03;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgb(248, 150, 3, 0), rgb(206, 75, 3, 0.75), rgb(248, 150, 3, 0));
+}
+
+/* small */
+@media (max-width: 768px) {
+  #mainHeading {
+    font-size: 4rem;
+  }
+}
+
+/* extra small */
+@media (max-width: 576px) {
+  #mainHeading {
+    font-size: 2.75rem;
+  }
+}
