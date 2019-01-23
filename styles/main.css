@@ -1,14 +1,14 @@
-#mainNavbar {
-  font-size: 1.5rem;
-  background-color: #f89603;
+#logo {
+  height: 50px;
+  width: auto;
 }
 
-/* #mainNavbar .nav-link {
-  color: white;
-} */
+#mainNavbar {
+  font-size: 1.5rem;
+}
 
 #mainNavbar .nav-link:hover {
-  color: white;
+  color: #ce4b03;
 }
 
 .jumbotron-fluid h1,
