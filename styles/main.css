@@ -71,12 +71,16 @@ h3 {
 hr {
   border: 0;
   height: 2px;
+<<<<<<< HEAD
   background-image: linear-gradient(
     to right,
     rgb(248, 150, 3, 0),
     rgb(206, 75, 3, 0.75),
     rgb(248, 150, 3, 0)
   );
+=======
+  background-image: linear-gradient(to right, rgb(248, 150, 3, 0), rgb(206, 75, 3, 0.75), rgb(248, 150, 3, 0));
+>>>>>>> 2f9885499db5694f2d3acda43b3448d2bf11a584
 }
 
 /* small */
