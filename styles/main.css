@@ -17,25 +17,40 @@ h3 {
   color: #f89603;
 }
 
-/* #home-section {
+#home-section {
   background: url('https://images.unsplash.com/photo-1452626038306-9aae5e071dd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1353&q=80');
   background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  z-index: -2;
   background-size: cover;
   background-attachment: fixed;
-  min-height: 900px;
+  min-height: 700px;
 }
 
-#home-section .dark-overlay {
+.dark-overlay {
   position: absolute;
   top: 0;
   left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
   width: 100%;
-  min-height: 900px;
-  background: rgba(0, 0, 0, 0.7);
-} */
+  min-height: 700px;
+  background: rgba(0, 0, 0, 0.6);
+}
 
 #mainHeading {
   font-weight: 400;
+  text-shadow: 2px 2px #000;
+}
+
+#jumbo-img {
+  border: 1px solid #f89603;
+}
+
+#jumbo-content {
+  text-shadow: 2px 2px #000;
 }
 
 .card-title {
@@ -55,7 +70,7 @@ h3 {
 
 hr {
   border: 0;
-  height: 1px;
+  height: 2px;
   background-image: linear-gradient(to right, rgb(248, 150, 3, 0), rgb(206, 75, 3, 0.75), rgb(248, 150, 3, 0));
 }
 
