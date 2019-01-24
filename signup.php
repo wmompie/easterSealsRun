@@ -26,39 +26,104 @@
         <!-- FIRST NAME -->
         <div class="form-group col-md-6">
           <label for="fname">First Name</label>
-          <input type="text" name="fname" data-toggle="tooltip" data-placement="top" title="First Name" class="form-control form-control-lg" id="fname" placeholder="Enter first name" value="<?php echo isset($_POST['fname']) ? $fname : ''; ?>">
+          <input
+          type="text"
+          name="fname"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="First Name"
+          class="form-control form-control-lg"
+          id="fname"
+          placeholder="Enter first name"
+          value="<?php echo isset($_POST['fname']) ? $fname : ''; ?>"
+          >
         </div>
         <!-- LAST NAME -->
         <div class="form-group col-md-6">
           <label for="lname">Last Name</label>
-          <input type="text" name="lname" data-toggle="tooltip" data-placement="top" title="Last Name" class="form-control form-control-lg" id="lname" placeholder="Enter last name" value="<?php echo isset($_POST['lname']) ? $lname : ''; ?>">
+          <input
+          type="text"
+          name="lname"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Last Name"
+          class="form-control form-control-lg"
+          id="lname"
+          placeholder="Enter last name"
+          value="<?php echo isset($_POST['lname']) ? $lname : ''; ?>"
+          >
         </div>
       </div>
       <!-- EMAIL -->
       <div class="form-group">
         <label for="inputEmail">Email</label>
-        <input type="email" name="email" data-toggle="tooltip" data-placement="top" title="Email" class="form-control form-control-lg" id="inputEmail" placeholder="Email" value="<?php echo isset($_POST['email ']) ? $email  : ''; ?>">
+        <input
+        type="email"
+        name="email"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Email"
+        class="form-control form-control-lg"
+        id="inputEmail"
+        placeholder="Email"
+        value="<?php echo isset($_POST['email ']) ? $email  : ''; ?>"
+        >
       </div>
       <!-- ADDRESS 1 -->
       <div class="form-group">
         <label for="inputAddress">Address</label>
-        <input type="text" name="address1" data-toggle="tooltip" data-placement="top" title="Address 1" class="form-control form-control-lg" id="inputAddress" placeholder="1234 Main St" value="<?php echo isset($_POST['address1']) ? $address1 : ''; ?>">
+        <input type="text"
+        name="address1"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Address 1"
+        class="form-control form-control-lg"
+        id="inputAddress"
+        placeholder="1234 Main St"
+        value="<?php echo isset($_POST['address1']) ? $address1 : ''; ?>"
+        >
       </div>
       <!-- ADDRESS 2 -->
       <div class="form-group">
         <label for="inputAddress2">Address 2</label>
-        <input type="text" name="address2" data-toggle="tooltip" data-placement="top" title="Address 2" class="form-control form-control-lg" id="inputAddress2" placeholder="Apartment, studio, or floor" value="<?php echo isset($_POST['address2']) ? $address2 : ''; ?>">
+        <input
+        type="text"
+        name="address2"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Address 2"
+        class="form-control form-control-lg"
+        id="inputAddress2"
+        placeholder="Apartment, studio, or floor"
+        value="<?php echo isset($_POST['address2']) ? $address2 : ''; ?>"
+        >
       </div>
       <div class="form-row">
         <!-- CITY -->
         <div class="form-group col-md-6">
           <label for="inputCity">City</label>
-          <input type="text" name="city" data-toggle="tooltip" data-placement="top" title="City" class="form-control form-control-lg" id="inputCity" value="<?php echo isset($_POST['city']) ? $city : ''; ?>">
+          <input
+          type="text"
+          name="city"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="City"
+          class="form-control form-control-lg"
+          id="inputCity"
+          value="<?php echo isset($_POST['city']) ? $city : ''; ?>"
+          >
         </div>
         <!-- STATE -->
         <div class="form-group col-md-4">
           <label for="inputState">State</label>
-          <select id="inputState" name="state" data-toggle="tooltip" data-placement="top" title="State" class="form-control form-control-lg">
+          <select
+          id="inputState"
+          name="state"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="State"
+          class="form-control form-control-lg"
+          >
             <option value="AL">AL</option>
             <option value="AK">AK</option>
             <option value="AR">AR</option>
@@ -115,19 +180,45 @@
         <!-- ZIP -->
         <div class="form-group col-md-2">
           <label for="inputZip">Zip</label>
-          <input type="text" name="zip" data-toggle="tooltip" data-placement="top" title="Zip Code" class="form-control form-control-lg" id="inputZip" value="<?php echo isset($_POST['zip']) ? $zip : ''; ?>">
+          <input
+          type="text"
+          name="zip"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Zip Code"
+          class="form-control form-control-lg"
+          id="inputZip"
+          value="<?php echo isset($_POST['zip']) ? $zip : ''; ?>"
+          >
         </div>
       </div>
         <div class="form-row">
           <!-- PHONE -->
         <div class="form-group col-md-6">
           <label for="inputPhone">Phone</label>
-          <input type="tel" name="phone" data-toggle="tooltip" data-placement="top" title="Phone" class="form-control form-control-lg" id="inputPhone" placeholder="Phone" value="<?php echo isset($_POST['phone']) ? $phone : ''; ?>">
+          <input
+          type="tel"
+          name="phone"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Phone"
+          class="form-control form-control-lg"
+          id="inputPhone"
+          placeholder="Phone"
+          value="<?php echo isset($_POST['phone']) ? $phone : ''; ?>"
+          >
         </div>
         <!-- DISTANCE  | 5K AS DEFAULT VALUE -->
         <div class="form-group col-md-6">
           <label for="inputRun">Distance</label>
-          <select id="inputRun" name="distance" data-toggle="tooltip" data-placement="top" title="Distance you would like to Run/Walk" class="form-control form-control-lg">
+          <select
+          id="inputRun"
+          name="distance"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Distance you would like to Run/Walk"
+          class="form-control form-control-lg"
+          >
           <option selected>5K</option>
             <option value="1m">1 Mile</option>
             <option value="5k">5K</option>
@@ -137,9 +228,21 @@
       </div>
       <div class="row mt-4 justify-content-between px-4 py-5">
         <!-- Use "submit_registration" as the name for the button used to submit the form. -->
-        <button type="submit" name="submit_registration" data-toggle="tooltip" data-placement="top" title="Submit Registration Form" class="btn btn-lg btn-success col-md-6">Submit Registration</button>
+        <button
+        type="submit"
+        name="submit_registration"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Submit Registration Form"
+        class="btn btn-lg btn-success col-md-6">Submit Registration</button>
         <!-- CANCEL BUTTON -->
-        <a href="index.html" name="cancel" data-toggle="tooltip" data-placement="top" title="Cancel Registration Form and Return to Home Page" class="btn btn-lg btn-danger col-md-2">Cancel</a>
+        <a
+        href="index.html"
+        name="cancel"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Cancel Registration Form and Return to Home Page"
+        class="btn btn-lg btn-danger col-md-1">Cancel</a>
       </div>
     </form>
   </div>
