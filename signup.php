@@ -25,7 +25,7 @@
       <div class="form-row">
         <!-- FIRST NAME -->
         <div class="form-group col-md-6">
-          <label for="fname">First Name</label>
+          <label for="fname" class="font-weight-bold">First Name</label>
           <input
           type="text"
           name="fname"
@@ -40,7 +40,7 @@
         </div>
         <!-- LAST NAME -->
         <div class="form-group col-md-6">
-          <label for="lname">Last Name</label>
+          <label for="lname" class="font-weight-bold">Last Name</label>
           <input
           type="text"
           name="lname"
@@ -56,7 +56,7 @@
       </div>
       <!-- EMAIL -->
       <div class="form-group">
-        <label for="inputEmail">Email</label>
+        <label for="inputEmail" class="font-weight-bold">Email</label>
         <input
         type="email"
         name="email"
@@ -69,42 +69,45 @@
         value="<?php echo isset($_POST['email ']) ? $email  : ''; ?>"
         >
       </div>
-      <!-- ADDRESS 1 -->
-      <div class="form-group">
-        <label for="inputAddress">Address</label>
-        <input type="text"
-        name="address1"
-        data-toggle="tooltip"
-        data-placement="top"
-        title="Address 1"
-        class="form-control form-control-lg"
-        id="inputAddress"
-        placeholder="1234 Main St"
-        value="<?php echo isset($_POST['address1']) ? $address1 : ''; ?>"
-        >
-      </div>
-      <!-- ADDRESS 2 -->
-      <div class="form-group">
-        <label for="inputAddress2">Address 2</label>
-        <input
-        type="text"
-        name="address2"
-        data-toggle="tooltip"
-        data-placement="top"
-        title="Address 2"
-        class="form-control form-control-lg"
-        id="inputAddress2"
-        placeholder="Apartment, studio, or floor"
-        value="<?php echo isset($_POST['address2']) ? $address2 : ''; ?>"
-        >
+      <div class="form-row">
+        <!-- ADDRESS 1 -->
+        <div class="form-group col-md-6">
+          <label for="inputAddress" class="font-weight-bold">Address</label>
+          <input type="text"
+          name="address1"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Address 1"
+          class="form-control form-control-lg"
+          id="inputAddress"
+          placeholder="1234 Main St"
+          value="<?php echo isset($_POST['address1']) ? $address1 : ''; ?>"
+          >
+        </div>
+        <!-- ADDRESS 2 -->
+        <div class="form-group col-md-6">
+          <label for="inputAddress2" class="font-weight-bold">Address 2</label>
+          <input
+          type="text"
+          name="address2"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Address 2"
+          class="form-control form-control-lg"
+          id="inputAddress2"
+          placeholder="Apartment, studio, or floor"
+          value="<?php echo isset($_POST['address2']) ? $address2 : ''; ?>"
+          >
+        </div>
       </div>
       <div class="form-row">
         <!-- CITY -->
         <div class="form-group col-md-6">
-          <label for="inputCity">City</label>
+          <label for="inputCity" class="font-weight-bold">City</label>
           <input
           type="text"
           name="city"
+          placeholder="City"
           data-toggle="tooltip"
           data-placement="top"
           title="City"
@@ -115,7 +118,7 @@
         </div>
         <!-- STATE -->
         <div class="form-group col-md-4">
-          <label for="inputState">State</label>
+          <label for="inputState" class="font-weight-bold">State</label>
           <select
           id="inputState"
           name="state"
@@ -179,10 +182,11 @@
         </div>
         <!-- ZIP -->
         <div class="form-group col-md-2">
-          <label for="inputZip">Zip</label>
+          <label for="inputZip" class="font-weight-bold">Zip</label>
           <input
           type="text"
           name="zip"
+          placeholder="Zip"
           data-toggle="tooltip"
           data-placement="top"
           title="Zip Code"
@@ -195,7 +199,7 @@
         <div class="form-row">
           <!-- PHONE -->
         <div class="form-group col-md-6">
-          <label for="inputPhone">Phone</label>
+          <label for="inputPhone" class="font-weight-bold">Phone</label>
           <input
           type="tel"
           name="phone"
@@ -210,7 +214,7 @@
         </div>
         <!-- DISTANCE  | 5K AS DEFAULT VALUE -->
         <div class="form-group col-md-6">
-          <label for="inputRun">Distance</label>
+          <label for="inputRun" class="font-weight-bold">Distance</label>
           <select
           id="inputRun"
           name="distance"
@@ -242,7 +246,7 @@
         data-toggle="tooltip"
         data-placement="top"
         title="Cancel Registration Form and Return to Home Page"
-        class="btn btn-lg btn-danger col-md-1">Cancel</a>
+        class="btn btn-lg btn-danger col-md-2">Cancel</a>
       </div>
     </form>
   </div>
