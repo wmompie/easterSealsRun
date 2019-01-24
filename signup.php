@@ -1,42 +1,59 @@
 <?php include 'inc/header.php' ?>
 
+<?php
+  // Check for Submit
+  if(filter_has_var(INPUT_POST, submit_registration)) {
+    // Get Form Data
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $email = $_POST['email'];
+    $address1 = $_POST['address1'];
+    $address2 = $_POST['address2'];
+    $city = $_POST['city'];
+    $state = $_POST['state'];
+    $zip = $_POST['zip'];
+    $phone = $_POST['phone'];
+    $distance = $_POST['distance'];
+  }
+?>
+
 <div class="signup-form">
   <h1 class="mb-3 text-center">Easterseals Run | Sign-Up Form</h1>
 
   <div class="container mb-5 border rounded border-orange pt-5 pb-2 px-4">
-    <form name="contact" action="<?php echo $_SERVER['PHP_SELF']; ?>" data-netlify="true">
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
       <div class="form-row">
         <!-- FIRST NAME -->
         <div class="form-group col-md-6">
           <label for="fname">First Name</label>
-          <input type="text" name="fname" data-toggle="tooltip" data-placement="top" title="First Name" class="form-control form-control-lg" id="fname" placeholder="Enter first name">
+          <input type="text" name="fname" data-toggle="tooltip" data-placement="top" title="First Name" class="form-control form-control-lg" id="fname" placeholder="Enter first name" value="<?php echo isset($_POST['fname']) ? $fname : ''; ?>">
         </div>
         <!-- LAST NAME -->
         <div class="form-group col-md-6">
           <label for="lname">Last Name</label>
-          <input type="text" name="lname" data-toggle="tooltip" data-placement="top" title="Last Name" class="form-control form-control-lg" id="lname" placeholder="Enter last name">
+          <input type="text" name="lname" data-toggle="tooltip" data-placement="top" title="Last Name" class="form-control form-control-lg" id="lname" placeholder="Enter last name" value="<?php echo isset($_POST['lname']) ? $lname : ''; ?>">
         </div>
       </div>
       <!-- EMAIL -->
       <div class="form-group">
         <label for="inputEmail">Email</label>
-        <input type="email" name="email" data-toggle="tooltip" data-placement="top" title="Email" class="form-control form-control-lg" id="inputEmail" placeholder="Email">
+        <input type="email" name="email" data-toggle="tooltip" data-placement="top" title="Email" class="form-control form-control-lg" id="inputEmail" placeholder="Email" value="<?php echo isset($_POST['email ']) ? $email  : ''; ?>">
       </div>
       <!-- ADDRESS 1 -->
       <div class="form-group">
         <label for="inputAddress">Address</label>
-        <input type="text" name="address1" data-toggle="tooltip" data-placement="top" title="Address 1" class="form-control form-control-lg" id="inputAddress" placeholder="1234 Main St">
+        <input type="text" name="address1" data-toggle="tooltip" data-placement="top" title="Address 1" class="form-control form-control-lg" id="inputAddress" placeholder="1234 Main St" value="<?php echo isset($_POST['address1']) ? $address1 : ''; ?>">
       </div>
       <!-- ADDRESS 2 -->
       <div class="form-group">
         <label for="inputAddress2">Address 2</label>
-        <input type="text" name="address2" data-toggle="tooltip" data-placement="top" title="Address 2" class="form-control form-control-lg" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        <input type="text" name="address2" data-toggle="tooltip" data-placement="top" title="Address 2" class="form-control form-control-lg" id="inputAddress2" placeholder="Apartment, studio, or floor" value="<?php echo isset($_POST['address2']) ? $address2 : ''; ?>">
       </div>
       <div class="form-row">
         <!-- CITY -->
         <div class="form-group col-md-6">
           <label for="inputCity">City</label>
-          <input type="text" name="city" data-toggle="tooltip" data-placement="top" title="City" class="form-control form-control-lg" id="inputCity">
+          <input type="text" name="city" data-toggle="tooltip" data-placement="top" title="City" class="form-control form-control-lg" id="inputCity" value="<?php echo isset($_POST['city']) ? $city : ''; ?>">
         </div>
         <!-- STATE -->
         <div class="form-group col-md-4">
@@ -98,14 +115,14 @@
         <!-- ZIP -->
         <div class="form-group col-md-2">
           <label for="inputZip">Zip</label>
-          <input type="text" name="zip" data-toggle="tooltip" data-placement="top" title="Zip Code" class="form-control form-control-lg" id="inputZip">
+          <input type="text" name="zip" data-toggle="tooltip" data-placement="top" title="Zip Code" class="form-control form-control-lg" id="inputZip" value="<?php echo isset($_POST['zip']) ? $zip : ''; ?>">
         </div>
       </div>
         <div class="form-row">
           <!-- PHONE -->
         <div class="form-group col-md-6">
           <label for="inputPhone">Phone</label>
-          <input type="tel" name="phone" data-toggle="tooltip" data-placement="top" title="Phone" class="form-control form-control-lg" id="inputPhone" placeholder="Phone">
+          <input type="tel" name="phone" data-toggle="tooltip" data-placement="top" title="Phone" class="form-control form-control-lg" id="inputPhone" placeholder="Phone" value="<?php echo isset($_POST['phone']) ? $phone : ''; ?>">
         </div>
         <!-- DISTANCE  | 5K AS DEFAULT VALUE -->
         <div class="form-group col-md-6">
