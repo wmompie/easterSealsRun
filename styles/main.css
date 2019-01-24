@@ -11,7 +11,7 @@
   color: #ce4b03;
 }
 
-.jumbotron-fluid h1,
+h1,
 h2,
 h3,
 h4,
@@ -87,12 +87,8 @@ hr {
   line-height: 1.25rem;
 }
 
-.easter-info {
-  margin-bottom: 4rem;
-}
-
 .signup-form {
-  margin-top: 10rem;
+  margin-top: 7rem;
 }
 
 /* //////////////// MEDIA QUERIES //////////////// */
