@@ -4,15 +4,15 @@
   // Check for Submit
   if(filter_has_var(INPUT_POST, submit_registration)) {
     // Get Form Data
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $email = $_POST['email'];
-    $address1 = $_POST['address1'];
-    $address2 = $_POST['address2'];
-    $city = $_POST['city'];
+    $fname = htmlspecialchars($_POST['fname']);
+    $lname = htmlspecialchars($_POST['lname']);
+    $email = htmlspecialchars($_POST['email']);
+    $address1 = htmlspecialchars($_POST['address1']);
+    $address2 = htmlspecialchars($_POST['address2']);
+    $city = htmlspecialchars($_POST['city']);
     $state = $_POST['state'];
-    $zip = $_POST['zip'];
-    $phone = $_POST['phone'];
+    $zip = htmlspecialchars($_POST['zip']);
+    $phone = htmlspecialchars($_POST['phone']);
     $distance = $_POST['distance'];
   }
 ?>
