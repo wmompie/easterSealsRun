@@ -3,76 +3,126 @@
 <div class="signup-form">
   <h1 class="mb-3 text-center">Easterseals Run | Sign-Up Form</h1>
 
-  <div class="container mb-5 border border-orange py-5 px-4">
-    <!-- *** NEED TO INCLUDE TITLE ATTRIBUTES AND NAME ATTRIBUTES *** -->
+  <div class="container mb-5 border rounded border-orange pt-5 pb-2 px-4">
     <form name="contact" action="<?php echo $_SERVER['PHP_SELF']; ?>" data-netlify="true">
       <div class="form-row">
         <!-- FIRST NAME -->
         <div class="form-group col-md-6">
           <label for="fname">First Name</label>
-          <input type="text" name="fname" class="form-control form-control-lg" id="fname" placeholder="Enter first name">
+          <input type="text" name="fname" data-toggle="tooltip" data-placement="top" title="First Name" class="form-control form-control-lg" id="fname" placeholder="Enter first name">
         </div>
         <!-- LAST NAME -->
         <div class="form-group col-md-6">
           <label for="lname">Last Name</label>
-          <input type="text" name="lname" class="form-control form-control-lg" id="lname" placeholder="Enter last name">
+          <input type="text" name="lname" data-toggle="tooltip" data-placement="top" title="Last Name" class="form-control form-control-lg" id="lname" placeholder="Enter last name">
         </div>
       </div>
       <!-- EMAIL -->
       <div class="form-group">
         <label for="inputEmail">Email</label>
-        <input type="email" name="email" class="form-control form-control-lg" id="inputEmail" placeholder="Email">
+        <input type="email" name="email" data-toggle="tooltip" data-placement="top" title="Email" class="form-control form-control-lg" id="inputEmail" placeholder="Email">
       </div>
       <!-- ADDRESS 1 -->
       <div class="form-group">
         <label for="inputAddress">Address</label>
-        <input type="text" name="address1" class="form-control form-control-lg" id="inputAddress" placeholder="1234 Main St">
+        <input type="text" name="address1" data-toggle="tooltip" data-placement="top" title="Address 1" class="form-control form-control-lg" id="inputAddress" placeholder="1234 Main St">
       </div>
       <!-- ADDRESS 2 -->
       <div class="form-group">
         <label for="inputAddress2">Address 2</label>
-        <input type="text" name="address2" class="form-control form-control-lg" id="inputAddress2" placeholder="Apartment, studio, or floor">
+        <input type="text" name="address2" data-toggle="tooltip" data-placement="top" title="Address 2" class="form-control form-control-lg" id="inputAddress2" placeholder="Apartment, studio, or floor">
       </div>
       <div class="form-row">
-        <!-- CITY, STATE, ZIP -->
+        <!-- CITY -->
         <div class="form-group col-md-6">
           <label for="inputCity">City</label>
-          <input type="text" name="city" class="form-control form-control-lg" id="inputCity">
+          <input type="text" name="city" data-toggle="tooltip" data-placement="top" title="City" class="form-control form-control-lg" id="inputCity">
         </div>
+        <!-- STATE -->
         <div class="form-group col-md-4">
           <label for="inputState">State</label>
-          <select id="inputState" class="form-control form-control-lg">
-            <option selected>Choose...</option>
-            <!-- NEED TO ADD IN THE OPTIONS -->
-            <option>...</option>
+          <select id="inputState" name="state" data-toggle="tooltip" data-placement="top" title="State" class="form-control form-control-lg">
+            <option value="AL">AL</option>
+            <option value="AK">AK</option>
+            <option value="AR">AR</option>
+            <option value="AZ">AZ</option>
+            <option value="CA">CA</option>
+            <option value="CO">CO</option>
+            <option value="CT">CT</option>
+            <option value="DC">DC</option>
+            <option value="DE">DE</option>
+            <option selected>FL</option>
+            <option value="GA">GA</option>
+            <option value="HI">HI</option>
+            <option value="IA">IA</option>
+            <option value="ID">ID</option>
+            <option value="IL">IL</option>
+            <option value="IN">IN</option>
+            <option value="KS">KS</option>
+            <option value="KY">KY</option>
+            <option value="LA">LA</option>
+            <option value="MA">MA</option>
+            <option value="MD">MD</option>
+            <option value="ME">ME</option>
+            <option value="MI">MI</option>
+            <option value="MN">MN</option>
+            <option value="MO">MO</option>
+            <option value="MS">MS</option>
+            <option value="MT">MT</option>
+            <option value="NC">NC</option>
+            <option value="NE">NE</option>
+            <option value="NH">NH</option>
+            <option value="NJ">NJ</option>
+            <option value="NM">NM</option>
+            <option value="NV">NV</option>
+            <option value="NY">NY</option>
+            <option value="ND">ND</option>
+            <option value="OH">OH</option>
+            <option value="OK">OK</option>
+            <option value="OR">OR</option>
+            <option value="PA">PA</option>
+            <option value="RI">RI</option>
+            <option value="SC">SC</option>
+            <option value="SD">SD</option>
+            <option value="TN">TN</option>
+            <option value="TX">TX</option>
+            <option value="UT">UT</option>
+            <option value="VT">VT</option>
+            <option value="VA">VA</option>
+            <option value="WA">WA</option>
+            <option value="WI">WI</option>
+            <option value="WV">WV</option>
+            <option value="WY">WY</option>
           </select>
         </div>
+        <!-- ZIP -->
         <div class="form-group col-md-2">
           <label for="inputZip">Zip</label>
-          <input type="text" name="zip" class="form-control form-control-lg" id="inputZip">
+          <input type="text" name="zip" data-toggle="tooltip" data-placement="top" title="Zip Code" class="form-control form-control-lg" id="inputZip">
         </div>
       </div>
         <div class="form-row">
           <!-- PHONE -->
         <div class="form-group col-md-6">
           <label for="inputPhone">Phone</label>
-          <input type="tel" name="phone" class="form-control form-control-lg" id="inputPhone" placeholder="Phone">
+          <input type="tel" name="phone" data-toggle="tooltip" data-placement="top" title="Phone" class="form-control form-control-lg" id="inputPhone" placeholder="Phone">
         </div>
         <!-- DISTANCE  | 5K AS DEFAULT VALUE -->
         <div class="form-group col-md-6">
           <label for="inputRun">Distance</label>
-          <select id="inputRun" class="form-control form-control-lg">
-            <option selected>Choose...</option>
-            <!-- NEED TO ADD IN THE OPTIONS -->
-            <option>...</option>
+          <select id="inputRun" name="distance" data-toggle="tooltip" data-placement="top" title="Distance you would like to Run/Walk" class="form-control form-control-lg">
+          <option selected>5K</option>
+            <option value="1m">1 Mile</option>
+            <option value="5k">5K</option>
+            <option value="10k">10K</option>
           </select>
         </div>
       </div>
-      <div class="row mt-4 justify-content-around">
+      <div class="row mt-4 justify-content-between px-4 py-5">
         <!-- Use "submit_registration" as the name for the button used to submit the form. -->
-        <button type="submit" name="submit" class="btn btn-lg btn-primary col-md-5">Submit</button>
+        <button type="submit" name="submit_registration" data-toggle="tooltip" data-placement="top" title="Submit Registration Form" class="btn btn-lg btn-success col-md-6">Submit Registration</button>
         <!-- CANCEL BUTTON -->
-        <a href="index.html" class="btn btn-lg btn-danger col-md-5">Cancel</a>
+        <a href="index.html" name="cancel" data-toggle="tooltip" data-placement="top" title="Cancel Registration Form and Return to Home Page" class="btn btn-lg btn-danger col-md-2">Cancel</a>
       </div>
     </form>
   </div>
