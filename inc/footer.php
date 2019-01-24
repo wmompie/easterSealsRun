@@ -1,6 +1,6 @@
 <hr />
 
-      <div class="row mt-3 easter-info">
+      <div class="row mt-3">
         <div class=" col-sm-12 text-center">
           <h4>Easterseals</h4>
           <p>
@@ -15,7 +15,7 @@
     </div>
 
     <!-- FOOTER -->
-    <footer class="navbar navbar-expand-sm navbar-light bg-light border-top fixed-bottom">
+    <footer class="navbar navbar-expand-sm navbar-light bg-light border-top">
       <div class="container-fluid"><p class="m-auto">&copy;2019 - William Mompie | Easterseals</p></div>
     </footer>
 
