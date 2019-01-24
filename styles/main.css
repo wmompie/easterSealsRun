@@ -13,7 +13,10 @@
 
 .jumbotron-fluid h1,
 h2,
-h3 {
+h3,
+h4,
+h5,
+h6 {
   color: #f89603;
 }
 
@@ -37,50 +40,46 @@ h3 {
   z-index: -1;
   width: 100%;
   min-height: 700px;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.7);
 }
 
 #mainHeading {
   font-weight: 400;
   text-shadow: 2px 2px #000;
+  letter-spacing: 0.7rem;
 }
 
 #jumbo-img {
   border: 1px solid #f89603;
 }
 
+#jumbo-content .lead {
+  font-size: 1.65rem;
+}
+
 #jumbo-content {
-  text-shadow: 2px 2px #000;
+  text-shadow: 1px 1px #000;
+  font-size: 1.35rem;
 }
 
 .card-title {
   color: #ce4b03;
 }
 
-.bg-orange {
-  background-color: #ce4b03;
-  color: #f7f7f7;
-}
-
-.bg-orange:hover {
-  background-color: white;
-  border: 1px solid #ce4b03;
-  color: #ce4b03;
+.border-orange {
+  border-color: #ce4b03;
 }
 
 hr {
   border: 0;
   height: 2px;
-<<<<<<< HEAD
-  background-image: linear-gradient(
-    to right,
-    rgb(248, 150, 3, 0),
-    rgb(206, 75, 3, 0.75),
-    rgb(248, 150, 3, 0)
-  );
-=======
   background-image: linear-gradient(to right, rgb(248, 150, 3, 0), rgb(206, 75, 3, 0.75), rgb(248, 150, 3, 0));
->>>>>>> 2f9885499db5694f2d3acda43b3448d2bf11a584
+}
+
+.asterisk-section p {
+  padding: 0 auto;
+  margin: 0 auto;
+  line-height: 1.25rem;
 }
 
 /* small */
