@@ -73,7 +73,12 @@ h6 {
 hr {
   border: 0;
   height: 2px;
-  background-image: linear-gradient(to right, rgb(248, 150, 3, 0), rgb(206, 75, 3, 0.75), rgb(248, 150, 3, 0));
+  background-image: linear-gradient(
+    to right,
+    rgb(248, 150, 3, 0),
+    rgb(206, 75, 3, 0.75),
+    rgb(248, 150, 3, 0)
+  );
 }
 
 .asterisk-section p {
@@ -82,6 +87,15 @@ hr {
   line-height: 1.25rem;
 }
 
+.easter-info {
+  margin-bottom: 4rem;
+}
+
+.signup-form {
+  margin-top: 10rem;
+}
+
+/* //////////////// MEDIA QUERIES //////////////// */
 /* small */
 @media (max-width: 768px) {
   #mainHeading {
