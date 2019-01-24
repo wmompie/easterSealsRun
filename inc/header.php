@@ -41,7 +41,7 @@
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="signup.php">Run Sign-Up</a></li>
-            <li class="nav-item"><a class="nav-link" href="#">Refer-a-Friend</a></li>
+            <li class="nav-item"><a class="nav-link" href="refer.php">Refer-a-Friend</a></li>
           </ul>
         </div>
       </div>
