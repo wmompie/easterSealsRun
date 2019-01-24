@@ -4,3 +4,6 @@
 //     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
 //   });
 // });
+
+// // INIT TOOLIP
+// $('[data-toggle="tooltip"]').tooltip();
