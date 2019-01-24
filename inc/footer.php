@@ -1,18 +1,21 @@
 <hr />
 
-      <div class="row my-3">
+      <div class="row mt-3">
         <div class=" col-sm-12 text-center">
           <h4>Easterseals</h4>
           <p>
             16105 Schaefer Pike, Pompano Beach, Florida 33060 | 800-221-6827 (toll-free) Easterseals and its affiliate
             organizations are 501(c)(3) nonprofit organizations.
           </p>
+          <p>
+            <small>All images provided by <a href="https://unsplash.com/">Unsplash.com</a></small>
+          </p>
         </div>
       </div>
     </div>
 
     <!-- FOOTER -->
-    <footer class="navbar navbar-expand-sm navbar-light bg-secondary text-light">
+    <footer class="navbar navbar-expand-sm navbar-light bg-light border-top">
       <div class="container-fluid"><p class="m-auto">&copy;2019 - William Mompie | Easterseals</p></div>
     </footer>
 

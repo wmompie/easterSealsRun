@@ -4,6 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
+    <!-- FAVICON -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico" />
+
     <!-- BOOTSTRAP CSS -->
     <link
       rel="stylesheet"
@@ -13,15 +16,15 @@
     />
 
     <!-- CUSTOM CSS -->
-    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="styles/main.css" />
 
     <title>Easterseals Run</title>
   </head>
   <body>
     <!-- NAVBAR -->
-    <nav id="mainNavbar" class="navbar navbar-expand-sm navbar-light shadow fixed-top">
+    <nav id="mainNavbar" class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
       <div class="container-fluid">
-        <a class="navbar-brand" href="index.html">Logo</a>
+        <a class="navbar-brand" href="index.html"><img id="logo" src="img/logo.png" alt="easterseals logo"/></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -37,8 +40,8 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="signup.php">Run Sign-Up</a></li>
-            <li class="nav-item"><a class="nav-link" href="refer.php">Refer-a-Friend</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Run Sign-Up</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Refer-a-Friend</a></li>
           </ul>
         </div>
       </div>
