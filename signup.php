@@ -5,7 +5,7 @@
 
   <div class="container mb-5 border border-orange py-5 px-4">
     <!-- *** NEED TO INCLUDE TITLE ATTRIBUTES AND NAME ATTRIBUTES *** -->
-    <form action="signup.php">
+    <form name="contact" action="<?php echo $_SERVER['PHP_SELF']; ?>" data-netlify="true">
       <div class="form-row">
         <!-- FIRST NAME -->
         <div class="form-group col-md-6">
