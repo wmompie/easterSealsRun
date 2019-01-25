@@ -22,7 +22,7 @@
   </head>
   <body>
     <!-- NAVBAR -->
-    <nav id="mainNavbar" class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+    <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html"><img id="logo" src="img/logo.png" alt="Easterseals Logo"/></a>
         <button
