@@ -15,6 +15,10 @@
     $phone = htmlspecialchars($_POST['phone']);
     $distance = $_POST['distance'];
   }
+
+  if(isset($_POST['submit_registration'])) {
+    header('Location: refer.php');
+  }
 ?>
 
 <div class="signup-form">
@@ -245,7 +249,8 @@
         data-toggle="tooltip"
         data-placement="top"
         title="Cancel Registration Form and Return to Home Page"
-        class="btn btn-lg btn-danger col-md-2 mb-3">Cancel</a>
+        class="btn btn-lg btn-danger col-md-2 mb-3"
+        role="button">Cancel</a>
       </div>
     </form>
   </div>
