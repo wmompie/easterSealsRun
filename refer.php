@@ -2,91 +2,82 @@
 
 <?php
   // Check for Submit
-  if(filter_has_var(INPUT_POST, submit_registration)) {
+  if(filter_has_var(INPUT_POST, 'submit_refer')) {
     // Web Form Data
-    // Add a web form to this page with the following fields:
-    //   - from_email
-    //   - to_email
-    //   - message
+    $from_email = htmlspecialchars($_POST['from_email']);
+    $to_email = htmlspecialchars($_POST['to_email']);
+    $message = htmlspecialchars($_POST['message']);
   }
 ?>
 
-<div class="signup-form">
-  <h1 class="mb-3 text-center">Easterseals Run | Refer a Friend</h1>
-
-  <!-- Add text indicating the opportunity to refer a friend to the site so they can sign up for the run.  -->
-
-
-
+<div class="container refer-form">
+  <h1 class="mb-5 text-center">Easterseals Run | Refer a Friend</h1>
+  <p class="text-center mb-5">If you know someone dealing with a disabling condition or that might want to tag along and help the community, it is a daunting task to know where to turn. Easterseals Run Miami Referral provides you the opportunity to refer a friend to this site so they can sign up for the run. The referral helps meet the individual needs of children and adults with disabilities and their families seeking services. Just enter the information needed below and we'll take care of the rest!</p>
   <div class="container mb-5 border rounded border-orange pt-5 pb-2 px-4">
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
-      <!-- Add a web form to this page with the following fields:
-        - from_email
-        - to_email
-        - message -->
-
-
-
-      <div class="form-row">
-        <!-- FROM EMAIL -->
-        <div class="form-group col-md-6">
-          <label for="fname" class="font-weight-bold">First Name</label>
-          <input
-          type="text"
-          name="fname"
-          data-toggle="tooltip"
-          data-placement="top"
-          title="First Name"
-          class="form-control form-control-lg"
-          id="fname"
-          placeholder="Enter first name"
-          value="<?php echo isset($_POST['fname']) ? $fname : ''; ?>"
-          >
-        </div>
-        <!-- TO EMAIL -->
-        <div class="form-group col-md-6">
-          <label for="lname" class="font-weight-bold">Last Name</label>
-          <input
-          type="text"
-          name="lname"
-          data-toggle="tooltip"
-          data-placement="top"
-          title="Last Name"
-          class="form-control form-control-lg"
-          id="lname"
-          placeholder="Enter last name"
-          value="<?php echo isset($_POST['lname']) ? $lname : ''; ?>"
-          >
-        </div>
+      <!-- FROM EMAIL -->
+      <div class="form-group">
+        <label for="inputFromEmail" class="font-weight-bold">Your Email</label>
+        <input
+        type="email"
+        name="from_email"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Your email"
+        class="form-control form-control-lg"
+        id="inputFromEmail"
+        placeholder="Your Email"
+        value="<?php echo isset($_POST['from_email ']) ? $from_email  : ''; ?>"
+        >
+      </div>
+      <!-- TO EMAIL -->
+      <div class="form-group">
+        <label for="inputToEmail" class="font-weight-bold">Friend's Email</label>
+        <input
+        type="email"
+        name="to_email"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Your friend's email"
+        class="form-control form-control-lg"
+        id="inputToEmail"
+        placeholder="Friend's Email"
+        value="<?php echo isset($_POST['to_email ']) ? $to_email  : ''; ?>"
+        >
       </div>
       <!-- MESSAGE -->
       <div class="form-group">
-        <label for="inputEmail" class="font-weight-bold">Email</label>
-        <input
-        type="email"
-        name="email"
+        <label for="inputMessage" class="font-weight-bold">Message</label>
+        <textarea
+        name="message"
         data-toggle="tooltip"
         data-placement="top"
-        title="Email"
+        title="Your personal message"
         class="form-control form-control-lg"
-        id="inputEmail"
-        placeholder="Email"
-        value="<?php echo isset($_POST['email ']) ? $email  : ''; ?>"
-        >
+        id="inputMessage"
+        placeholder="Your Personal Message"
+        value="<?php echo isset($_POST['message ']) ? $message  : ''; ?>"
+        rows="3"
+        ></textarea>
       </div>
-
-
-      <!-- Add a link to return to the Home page. -->
-
-      <!-- RETURN HOME -->
-      <div class="row mt-4 justify-content-between px-4 py-5">
+      <div class="row submit-btn-group mt-4 justify-content-between px-4 py-5">
+        <!-- REFER A FRIEND -->
+        <button
+        type="submit"
+        name="submit_refer"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Submit the referral to your friend"
+        class="btn btn-lg btn-success col-md-5 mb-3">Submit Referral</button>
+        <!-- RETURN HOME -->
         <a
         href="index.html"
-        name="cancel"
+        name="return"
         data-toggle="tooltip"
         data-placement="top"
-        title="Cancel Registration Form and Return to Home Page"
-        class="btn btn-lg btn-danger col-md-2">Return Home</a>
+        title="Return to Home Page"
+        class="btn btn-lg btn-success col-md-5 mb-3"
+        role="button">Return Home</a>
       </div>
     </form>
   </div>
