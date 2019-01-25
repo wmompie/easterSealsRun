@@ -2,7 +2,7 @@
 
 <?php
   // Check for Submit
-  if(filter_has_var(INPUT_POST, submit_registration)) {
+  if(filter_has_var(INPUT_POST, 'submit_registration')) {
     // Get Form Data
     $fname = htmlspecialchars($_POST['fname']);
     $lname = htmlspecialchars($_POST['lname']);
@@ -18,7 +18,7 @@
 ?>
 
 <div class="signup-form">
-  <h1 class="mb-3 text-center">Easterseals Run | Sign-Up Form</h1>
+  <h1 class="mb-5 text-center">Easterseals Run | Sign-Up Form</h1>
 
   <div class="container mb-5 border rounded border-orange pt-5 pb-2 px-4">
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
@@ -223,14 +223,13 @@
           title="Distance you would like to Run/Walk"
           class="form-control form-control-lg"
           >
-          <option selected>5K</option>
             <option value="1m">1 Mile</option>
-            <option value="5k">5K</option>
+            <option selected>5K</option>
             <option value="10k">10K</option>
           </select>
         </div>
       </div>
-      <div class="row mt-4 justify-content-between px-4 py-5">
+      <div class="row submit-btn-group mt-4 justify-content-between px-4 py-5">
         <!-- Use "submit_registration" as the name for the button used to submit the form. -->
         <button
         type="submit"
@@ -238,7 +237,7 @@
         data-toggle="tooltip"
         data-placement="top"
         title="Submit Registration Form"
-        class="btn btn-lg btn-success col-md-6">Submit Registration</button>
+        class="btn btn-lg btn-success col-md-6 mb-3">Submit Registration</button>
         <!-- CANCEL BUTTON -->
         <a
         href="index.html"
@@ -246,7 +245,7 @@
         data-toggle="tooltip"
         data-placement="top"
         title="Cancel Registration Form and Return to Home Page"
-        class="btn btn-lg btn-danger col-md-2">Cancel</a>
+        class="btn btn-lg btn-danger col-md-2 mb-3">Cancel</a>
       </div>
     </form>
   </div>
