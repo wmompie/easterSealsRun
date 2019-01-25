@@ -35,7 +35,12 @@
       crossorigin="anonymous"
     ></script>
 
+
     <!-- CUSTOM JAVASCRIPT -->
-    <script src="scripts/main.js"></script>
+    <!-- <script src="scripts/main.js"></script> -->
+    <script>
+      // INIT TOOLIP
+      $('[data-toggle="tooltip"]').tooltip();
+    </script>
   </body>
 </html>
