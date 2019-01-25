@@ -66,6 +66,17 @@ h6 {
   color: #ce4b03;
 }
 
+.bg-orange {
+  background-color: #ce4b03;
+  color: #f7f7f7;
+}
+
+.bg-orange:hover {
+  background-color: white;
+  border: 1px solid #ce4b03;
+  color: #ce4b03;
+}
+
 .border-orange {
   border-color: #ce4b03;
 }
@@ -82,8 +93,14 @@ hr {
   line-height: 1.25rem;
 }
 
-.signup-form {
+.signup-form,
+.refer-form {
   margin-top: 7rem;
+}
+
+.refer-form p {
+  font-weight: 600;
+  letter-spacing: 0.1rem;
 }
 
 /* //////////////// MEDIA QUERIES //////////////// */
@@ -92,7 +109,8 @@ hr {
   #mainHeading {
     font-size: 4rem;
   }
-  .signup-form h1 {
+  .signup-form h1,
+  .refer-form h1 {
     font-size: 2rem;
     margin-bottom: 2rem !important;
   }
@@ -103,7 +121,8 @@ hr {
   #mainHeading {
     font-size: 2.75rem;
   }
-  .signup-form h1 {
+  .signup-form h1,
+  .refer-form h1 {
     font-size: 1.75rem;
     margin-bottom: 1.5rem !important;
   }
