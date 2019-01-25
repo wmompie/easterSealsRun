@@ -4,14 +4,14 @@
   // Check for Submit
   if(filter_has_var(INPUT_POST, 'submit_registration')) {
     // Get Form Data
-    $fname = htmlspecialchars($_POST['fname']);
-    $lname = htmlspecialchars($_POST['lname']);
+    $first_name = htmlspecialchars($_POST['first_name']);
+    $last_name = htmlspecialchars($_POST['last_name']);
     $email = htmlspecialchars($_POST['email']);
     $address1 = htmlspecialchars($_POST['address1']);
     $address2 = htmlspecialchars($_POST['address2']);
     $city = htmlspecialchars($_POST['city']);
     $state = $_POST['state'];
-    $zip = htmlspecialchars($_POST['zip']);
+    $postal_code = htmlspecialchars($_POST['postal_code']);
     $phone = htmlspecialchars($_POST['phone']);
     $distance = $_POST['distance'];
   }
@@ -29,32 +29,32 @@
       <div class="form-row">
         <!-- FIRST NAME -->
         <div class="form-group col-md-6">
-          <label for="fname" class="font-weight-bold">First Name</label>
+          <label for="first_name" class="font-weight-bold">First Name</label>
           <input
           type="text"
-          name="fname"
+          name="first_name"
           data-toggle="tooltip"
           data-placement="top"
           title="First Name"
           class="form-control form-control-lg"
-          id="fname"
+          id="first_name"
           placeholder="Enter first name"
-          value="<?php echo isset($_POST['fname']) ? $fname : ''; ?>"
+          value="<?php echo isset($_POST['first_name']) ? $first_name : ''; ?>"
           >
         </div>
         <!-- LAST NAME -->
         <div class="form-group col-md-6">
-          <label for="lname" class="font-weight-bold">Last Name</label>
+          <label for="last_name" class="font-weight-bold">Last Name</label>
           <input
           type="text"
-          name="lname"
+          name="last_name"
           data-toggle="tooltip"
           data-placement="top"
           title="Last Name"
           class="form-control form-control-lg"
-          id="lname"
+          id="last_name"
           placeholder="Enter last name"
-          value="<?php echo isset($_POST['lname']) ? $lname : ''; ?>"
+          value="<?php echo isset($_POST['last_name']) ? $last_name : ''; ?>"
           >
         </div>
       </div>
@@ -111,7 +111,7 @@
           <input
           type="text"
           name="city"
-          placeholder="City"
+          placeholder="Miami"
           data-toggle="tooltip"
           data-placement="top"
           title="City"
@@ -184,19 +184,18 @@
             <option value="WY">WY</option>
           </select>
         </div>
-        <!-- ZIP -->
+        <!-- POSTAL CODE -->
         <div class="form-group col-md-2">
-          <label for="inputZip" class="font-weight-bold">Zip</label>
+          <label for="inputPostal_code" class="font-weight-bold">Postal Code</label>
           <input
           type="text"
-          name="zip"
-          placeholder="Zip"
+          name="postal_code"
           data-toggle="tooltip"
           data-placement="top"
-          title="Zip Code"
+          title="Postal Code"
           class="form-control form-control-lg"
-          id="inputZip"
-          value="<?php echo isset($_POST['zip']) ? $zip : ''; ?>"
+          id="inputPostal_code"
+          value="<?php echo isset($_POST['postal_code']) ? $postal_code : ''; ?>"
           >
         </div>
       </div>
