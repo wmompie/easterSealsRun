@@ -16,8 +16,13 @@
     $distance = $_POST['distance'];
   }
 
+  // $url = $_SERVER["HTTP_HOST"]."/easterseals/refer.php";
+  // var_dump($url);
+  
   if(isset($_POST['submit_registration'])) {
-    header('Location: refer.php');
+    // header("location: ".$url);
+    header('Location: http://wmompie.mydevryportfolio.com/easterseals/refer.php/');
+    exit;
   }
 ?>
 
