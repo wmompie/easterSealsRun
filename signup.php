@@ -18,11 +18,17 @@
 
   // $url = $_SERVER["HTTP_HOST"]."/easterseals/refer.php";
   // var_dump($url);
+
+  /* Redirect to a different page in the current directory that was requested */
+  $host  = $_SERVER['HTTP_HOST'];
+  $uri   = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+  $extra = 'refer.php';
+  
   
   if(isset($_POST['submit_registration'])) {
     // header("location: ".$url);
-    header('Location: http://wmompie.mydevryportfolio.com/easterseals/refer.php/');
-    exit;
+    // header("Location: http://wmompie.mydevryportfolio.com/easterseals/refer.php/");
+    header("Location: http://$host$uri/$extra");
   }
 ?>
 
