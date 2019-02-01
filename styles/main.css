@@ -68,7 +68,10 @@ h6 {
 }
 
 #regis-event-img {
-  opacity: 0.8;
+  opacity: 0.9;
+  max-width: 500px;
+  max-height: 325px;
+  border: 2px solid #f89603;
 }
 
 .bg-orange {
@@ -206,6 +209,11 @@ hr {
   #second-div-sidebar {
     border-bottom: none !important;
   }
+
+  #regis-event-img {
+    max-width: 400px;
+    max-height: 250px;
+  }
 }
 
 /* small */
@@ -218,6 +226,11 @@ hr {
   .refer-form h1 {
     font-size: 2rem;
     margin-bottom: 2rem !important;
+  }
+
+  #regis-event-img {
+    max-width: 350px;
+    max-height: 225px;
   }
 }
 
