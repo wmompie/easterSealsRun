@@ -20,14 +20,14 @@ if (filter_has_var(INPUT_POST, 'submit_registration')) {
 // var_dump($url);
 
 /* Redirect to a different page in the current directory that was requested */
-$host = $_SERVER['HTTP_HOST'];
-$uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-$extra = 'refer.php';
+// $host = $_SERVER['HTTP_HOST'];
+// $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+// $extra = 'refer.php';
 
 if (isset($_POST['submit_registration'])) {
     // header("location: ".$url);
-    // header("Location: http://wmompie.mydevryportfolio.com/easterseals/refer.php/");
-    header("Location: http://$host$uri/$extra");
+    header("Location: http://wmompie.mydevryportfolio.com/easterseals/refer.php");
+    // header("Location: http://$host$uri/$extra");
 }
 ?>
 
@@ -242,7 +242,17 @@ if (isset($_POST['submit_registration'])) {
           </select>
         </div>
       </div>
-      <div class="row submit-btn-group mt-4 justify-content-between px-4 py-5">
+      <div class="row justify-content-end mt-4 px-4">
+        <a
+          href="refer.php"
+          name="refer"
+          data-toggle="tooltip"
+          data-placement="top"
+          title="Refer A Friend!!! Let them join you on the adventure!"
+          class="btn btn-success col-md-2"
+          role="button">Refer A Friend!!!</a>
+      </div>
+      <div class="row mt-4 justify-content-between px-4 pt-1 pb-2">
         <!-- Use "submit_registration" as the name for the button used to submit the form. -->
         <button
         type="submit"
