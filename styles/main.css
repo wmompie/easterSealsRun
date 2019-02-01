@@ -62,8 +62,9 @@ h6 {
   font-size: 1.35rem;
 }
 
-.card-title {
-  color: #ce4b03;
+.easter-girl {
+  width: auto;
+  height: 35px;
 }
 
 .bg-orange {
@@ -84,12 +85,7 @@ h6 {
 hr {
   border: 0;
   height: 2px;
-  background-image: linear-gradient(
-    to right,
-    rgb(248, 150, 3, 0),
-    rgb(206, 75, 3, 0.75),
-    rgb(248, 150, 3, 0)
-  );
+  background-image: linear-gradient(to right, rgb(248, 150, 3, 0), rgb(206, 75, 3, 0.75), rgb(248, 150, 3, 0));
 }
 
 .asterisk-section p {
@@ -108,6 +104,91 @@ hr {
   letter-spacing: 0.1rem;
 }
 
+#sidebar a {
+  text-decoration: none;
+  vertical-align: middle;
+  text-align: center;
+  /* line-height: 3; */
+}
+
+#sidebar p {
+  color: white;
+  position: relative;
+  left: -10px;
+  padding-top: 10px;
+}
+
+#sidebar {
+  height: 250px;
+  width: 10px;
+  position: fixed;
+  top: 230px;
+  text-align: center;
+  padding: 10px;
+  margin-left: 10px;
+  z-index: 1000;
+}
+
+#sidebar p i {
+  left: 30px;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 24px;
+}
+
+.social {
+  margin-left: -200px;
+  width: 230px;
+  padding: 0;
+  display: inline-table;
+  height: 0px;
+  background-color: rgba(128, 128, 128, 0.73);
+  transition-property: margin-left;
+  transition-duration: 0.2s;
+  transition-delay: 0.2s;
+  box-shadow: 0px 0px 6px 0px #3e3d3d;
+  cursor: pointer;
+}
+
+.social:hover {
+  margin-left: -30px;
+  width: 230px;
+  background-color: #3b5998;
+}
+
+.facebook:hover {
+  background-color: #3b5998;
+}
+
+.twitter:hover {
+  background-color: #4099ff;
+}
+
+.share:hover {
+  background-color: #ce6254;
+}
+
+.linkedin p i {
+  left: 20px;
+}
+
+.share p i {
+  left: 35px;
+}
+
+.pinterest p i {
+  left: 18px;
+}
+
+.pinterest:hover {
+  background-color: #bd081c;
+}
+
+.linkedin:hover {
+  background-color: #0976b4;
+}
+
 /* //////////////// MEDIA QUERIES //////////////// */
 /* medium */
 @media (max-width: 991px) {
@@ -117,6 +198,7 @@ hr {
     border-top: 1px solid rgb(222, 226, 230);
     padding-top: 2.5rem;
   }
+
   #second-div-sidebar {
     border-bottom: none !important;
   }
@@ -127,6 +209,7 @@ hr {
   #mainHeading {
     font-size: 4rem;
   }
+
   .signup-form h1,
   .refer-form h1 {
     font-size: 2rem;
@@ -139,6 +222,7 @@ hr {
   #mainHeading {
     font-size: 2.75rem;
   }
+
   .signup-form h1,
   .refer-form h1 {
     font-size: 1.75rem;
