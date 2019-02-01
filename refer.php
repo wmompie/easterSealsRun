@@ -1,13 +1,13 @@
-<?php include 'inc/header.php' ?>
+<?php include 'inc/header.php'?>
 
 <?php
-  // Check for Submit
-  if(filter_has_var(INPUT_POST, 'submit_refer')) {
+// Check for Submit
+if (filter_has_var(INPUT_POST, 'submit_refer')) {
     // Web Form Data
     $from_email = htmlspecialchars($_POST['from_email']);
     $to_email = htmlspecialchars($_POST['to_email']);
     $message = htmlspecialchars($_POST['message']);
-  }
+}
 ?>
 
 <div class="container refer-form">
@@ -27,7 +27,7 @@
         class="form-control form-control-lg"
         id="inputFromEmail"
         placeholder="Your Email"
-        value="<?php echo isset($_POST['from_email ']) ? $from_email  : ''; ?>"
+        value="<?php echo isset($_POST['from_email ']) ? $from_email : ''; ?>"
         >
       </div>
       <!-- TO EMAIL -->
@@ -42,7 +42,7 @@
         class="form-control form-control-lg"
         id="inputToEmail"
         placeholder="Friend's Email"
-        value="<?php echo isset($_POST['to_email ']) ? $to_email  : ''; ?>"
+        value="<?php echo isset($_POST['to_email ']) ? $to_email : ''; ?>"
         >
       </div>
       <!-- MESSAGE -->
@@ -56,7 +56,7 @@
         class="form-control form-control-lg"
         id="inputMessage"
         placeholder="Your Personal Message"
-        value="<?php echo isset($_POST['message ']) ? $message  : ''; ?>"
+        value="<?php echo isset($_POST['message ']) ? $message : ''; ?>"
         rows="3"
         ></textarea>
       </div>
@@ -83,4 +83,4 @@
   </div>
 </div>
 
-<?php include 'inc/footer.php' ?>
+<?php include 'inc/footer.php'?>
