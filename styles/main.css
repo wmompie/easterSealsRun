@@ -90,6 +90,18 @@ h6 {
 }
 
 hr {
+  -moz-border: 0;
+  -moz-height: 2px;
+  -moz-background-image: linear-gradient(to right, rgb(248, 150, 3, 0), rgb(206, 75, 3, 0.75), rgb(248, 150, 3, 0));
+  -ms-border: 0;
+  -ms-height: 2px;
+  -ms-background-image: linear-gradient(to right, rgb(248, 150, 3, 0), rgb(206, 75, 3, 0.75), rgb(248, 150, 3, 0));
+  -o-border: 0;
+  -o-height: 2px;
+  -o-background-image: linear-gradient(to right, rgb(248, 150, 3, 0), rgb(206, 75, 3, 0.75), rgb(248, 150, 3, 0));
+  -webkit-border: 0;
+  -webkit-height: 2px;
+  -webkit-background-image: linear-gradient(to right, rgb(248, 150, 3, 0), rgb(206, 75, 3, 0.75), rgb(248, 150, 3, 0));
   border: 0;
   height: 2px;
   background-image: linear-gradient(to right, rgb(248, 150, 3, 0), rgb(206, 75, 3, 0.75), rgb(248, 150, 3, 0));
