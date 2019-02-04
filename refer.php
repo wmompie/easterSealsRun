@@ -1,20 +1,25 @@
 <?php include 'inc/header.php'?>
 
 <?php
-// Check for Submit
-if (filter_has_var(INPUT_POST, 'submit_refer')) {
-    // Web Form Data
+  // CHECK FOR SUBMIT
+  if (filter_has_var(INPUT_POST, 'submit_refer')) {
+    // WEB FORM DATA
     $from_email = htmlspecialchars($_POST['from_email']);
     $to_email = htmlspecialchars($_POST['to_email']);
     $message = htmlspecialchars($_POST['message']);
-}
+    // EMAIL PROPERTIES
+    $to = 'wmompie@my.devry.edu';
+    $subject = "Refer A Friend Email Submission";
+    $from = $to_email;
+    $header = "From: $from_email";
+  }
 ?>
 
 <div class="container refer-form">
   <h1 class="mb-5 text-center">Easterseals Run | Refer a Friend</h1>
   <p class="text-center mb-5">If you know someone dealing with a disabling condition or that might want to tag along and help the community, it is a daunting task to know where to turn. Easterseals Run Miami Referral provides you the opportunity to refer a friend to this site so they can sign up for the run. The referral helps meet the individual needs of children and adults with disabilities and their families seeking services. Just enter the information needed below and we'll take care of the rest!</p>
   <div class="container mb-5 border rounded border-orange pt-5 pb-2 px-4">
-    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="referForm">
       <!-- FROM EMAIL -->
       <div class="form-group">
         <label for="inputFromEmail" class="font-weight-bold">Your Email</label>
