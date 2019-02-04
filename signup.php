@@ -1,8 +1,27 @@
 <?php include 'inc/header.php'?>
 
 <?php
+// $url = $_SERVER["HTTP_HOST"]."/easterseals/refer.php";
+// var_dump($url);
+
+/* Redirect to a different page in the current directory that was requested */
+// $host = $_SERVER['HTTP_HOST'];
+// $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
+// $extra = 'refer.php';
+
+// if (isset($_POST['submit_registration'])) {
+//     // header("location: ".$url);
+//     header("Location: http://wmompie.mydevryportfolio.com/easterseals/refer.php");
+//     // header("Location: http://$host$uri/$extra");
+// }
+
+  session_start();
+  $submit = $_POST['submit_registration'];
+  if(isset($submit)) {
+    header("Location: refer.php"); //redirect to refer
+  }
 // Check for Submit
-if (filter_has_var(INPUT_POST, 'submit_registration')) {
+  if (filter_has_var(INPUT_POST, 'submit_registration')) {
     // Get Form Data
     $first_name = htmlspecialchars($_POST['first_name']);
     $last_name = htmlspecialchars($_POST['last_name']);
@@ -14,21 +33,8 @@ if (filter_has_var(INPUT_POST, 'submit_registration')) {
     $postal_code = htmlspecialchars($_POST['postal_code']);
     $phone = htmlspecialchars($_POST['phone']);
     $distance = $_POST['distance'];
-}
+  }
 
-// $url = $_SERVER["HTTP_HOST"]."/easterseals/refer.php";
-// var_dump($url);
-
-/* Redirect to a different page in the current directory that was requested */
-// $host = $_SERVER['HTTP_HOST'];
-// $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-// $extra = 'refer.php';
-
-if (isset($_POST['submit_registration'])) {
-    // header("location: ".$url);
-    header("Location: http://wmompie.mydevryportfolio.com/easterseals/refer.php");
-    // header("Location: http://$host$uri/$extra");
-}
 ?>
 
 <div class="signup-form">
