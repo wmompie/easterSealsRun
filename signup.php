@@ -41,7 +41,7 @@
   <h1 class="mb-5 text-center">Easterseals Run | Sign-Up Form</h1>
 
   <div class="container mb-5 border rounded border-orange pt-5 pb-2 px-4">
-    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>">
+    <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="signupForm">
       <div class="form-row">
         <!-- FIRST NAME -->
         <div class="form-group col-md-6">
