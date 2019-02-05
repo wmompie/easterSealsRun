@@ -228,7 +228,7 @@ if (filter_has_var(INPUT_POST, 'submit_registration')) {
         </div>
         <!-- POSTAL CODE -->
         <div class="form-group col-md-2">
-          <label for="inputPostal_code" class="font-weight-bold">Postal Code <span class="red-asterisk">&#42;</span></label>
+          <label for="inputPostal_code" class="font-weight-bold">Postal <span class="red-asterisk">&#42;</span></label>
           <input
           type="text"
           name="postal_code"
