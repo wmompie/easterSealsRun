@@ -31,10 +31,9 @@ if (filter_has_var(INPUT_POST, 'submit_refer')) {
             } else {
                 // PASSED FRIEND'S (TO) EMAIL VALIDATION
                 $subject = "Refer-A-Friend Email for Easterseals Run";
-                $body = '<h2>Refer-A-Friend Email for Easterseals Run</h2>
-                    <h4>From</h4><p>' . $from_email . '</p>
-                    <h4>Email</h4><p>' . $to_email . '</p>
-                    <h4>Message</h4><p>' . $message . '</p>';
+                $body = '<h2>You have  been invited to an Easterseals Run by a friend using the Refer-A-Friend!</h2>
+                    <h4>From: ' . $from_email . '</h2>
+                    <h4>Message: </h4><p>' . $message . '</p>';
 
                 // EMAIL HEADERS
                 $headers = "MIME-Version: 1.0" . "\r\n";
