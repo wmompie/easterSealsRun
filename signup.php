@@ -1,28 +1,16 @@
-<?php include 'inc/header.php'?>
+<?php include 'inc/header.php';?>
 
 <?php
-// $url = $_SERVER["HTTP_HOST"]."/easterseals/refer.php";
-// var_dump($url);
 
-/* Redirect to a different page in the current directory that was requested */
-// $host = $_SERVER['HTTP_HOST'];
-// $uri = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-// $extra = 'refer.php';
+require 'config/dbuser.php';
 
-// if (isset($_POST['submit_registration'])) {
-//     // header("location: ".$url);
-//     header("Location: http://wmompie.mydevryportfolio.com/easterseals/refer.php");
-//     // header("Location: http://$host$uri/$extra");
-// }
+// MESSAGE VARIABLES
+$msg = '';
+$msgClass = '';
 
-  session_start();
-  $submit = $_POST['submit_registration'];
-  if(isset($submit)) {
-    header("Location: refer.php"); //redirect to refer
-  }
-// Check for Submit
-  if (filter_has_var(INPUT_POST, 'submit_registration')) {
-    // Get Form Data
+// CHECK FOR SUBMIT
+if (filter_has_var(INPUT_POST, 'submit_registration')) {
+    // GET FORM DATA
     $first_name = htmlspecialchars($_POST['first_name']);
     $last_name = htmlspecialchars($_POST['last_name']);
     $email = htmlspecialchars($_POST['email']);
@@ -33,7 +21,36 @@
     $postal_code = htmlspecialchars($_POST['postal_code']);
     $phone = htmlspecialchars($_POST['phone']);
     $distance = $_POST['distance'];
-  }
+
+    //QUERY
+    $sql = "INSERT INTO runner (fname, lname, email, address1, address2, city, state, postalcode, phone, Distance) VALUES ('$first_name', '$last_name', '$email', '$address1', '$address2', '$city', '$state', '$postal_code', '$phone', '$distance')";
+
+    // CHECK REQUIRED FIELDS
+    if (!empty($first_name) && !empty($last_name) && !empty($email) && !empty($address1) && !empty($city) && !empty($state) && !empty($postal_code) && !empty($phone) && !empty($distance)) {
+        // PASSED REQUIRED FIELDS CHECK
+        // CHECK EMAIL
+        if (filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+            // FAILED EMAIL VALIDATION
+            $msg = '<strong>Please Use A Valid Email</strong>';
+            $msgClass = 'alert alert-danger alert-dismissible fade show';
+        } else {
+            // PASSED EMAIL VALIDATION
+            if (mysqli_query($conn, $sql)) {
+                // PASSED QUERY CONNECTION AND INSERTED DATA TO THE DATABASE
+                $msg = 'Thank you for signing up for the Easterseals Run!!! <strong> Please Make Sure To Refer A Friend With The Link Below!!!</strong>';
+                $msgClass = 'alert alert-success alert-dismissible fade show';
+            } else {
+                // FAILED TO INSERT THE DATA TO THE DATABASE
+                $msg = '<strong>An Error Has Occured. Please Try Again In A Few Minutes.</strong>';
+                $msgClass = 'alert alert-danger alert-dismissible fade show';
+            }
+        }
+    } else {
+        // FAILED REQUIRED FIELDS CHECK
+        $msg = '<strong>HEY THERE!!!</strong> You should probably fill in all of the required fields below marked with red asterisks.';
+        $msgClass = 'alert alert-danger alert-dismissible fade show';
+    }
+}
 
 ?>
 
@@ -41,11 +58,20 @@
   <h1 class="mb-5 text-center">Easterseals Run | Sign-Up Form</h1>
 
   <div class="container mb-5 border rounded border-orange pt-5 pb-2 px-4">
+    <?php if ($msg != ''): ?>
+      <div class="<?php echo $msgClass; ?>" role="alert">
+        <?php echo $msg; ?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    <?php endif;?>
     <form method="post" action="<?php echo $_SERVER['PHP_SELF']; ?>" name="signupForm">
       <div class="form-row">
         <!-- FIRST NAME -->
         <div class="form-group col-md-6">
-          <label for="first_name" class="font-weight-bold">First Name</label>
+          <label for="first_name" class="font-weight-bold">First Name <span class="red-asterisk">&#42;</span></label>
+
           <input
           type="text"
           name="first_name"
@@ -60,7 +86,7 @@
         </div>
         <!-- LAST NAME -->
         <div class="form-group col-md-6">
-          <label for="last_name" class="font-weight-bold">Last Name</label>
+          <label for="last_name" class="font-weight-bold">Last Name <span class="red-asterisk">&#42;</span></label>
           <input
           type="text"
           name="last_name"
@@ -76,7 +102,7 @@
       </div>
       <!-- EMAIL -->
       <div class="form-group">
-        <label for="inputEmail" class="font-weight-bold">Email</label>
+        <label for="inputEmail" class="font-weight-bold">Email <span class="red-asterisk">&#42;</span></label>
         <input
         type="email"
         name="email"
@@ -86,13 +112,13 @@
         class="form-control form-control-lg"
         id="inputEmail"
         placeholder="Email"
-        value="<?php echo isset($_POST['email ']) ? $email : ''; ?>"
+        value="<?php echo isset($_POST['email']) ? $email : ''; ?>"
         >
       </div>
       <div class="form-row">
         <!-- ADDRESS 1 -->
         <div class="form-group col-md-6">
-          <label for="inputAddress" class="font-weight-bold">Address</label>
+          <label for="inputAddress" class="font-weight-bold">Address <span class="red-asterisk">&#42;</span></label>
           <input type="text"
           name="address1"
           data-toggle="tooltip"
@@ -100,7 +126,7 @@
           title="Address 1"
           class="form-control form-control-lg"
           id="inputAddress"
-          placeholder="1234 Main St"
+          placeholder="Enter address"
           value="<?php echo isset($_POST['address1']) ? $address1 : ''; ?>"
           >
         </div>
@@ -123,7 +149,7 @@
       <div class="form-row">
         <!-- CITY -->
         <div class="form-group col-md-6">
-          <label for="inputCity" class="font-weight-bold">City</label>
+          <label for="inputCity" class="font-weight-bold">City <span class="red-asterisk">&#42;</span></label>
           <input
           type="text"
           name="city"
@@ -133,12 +159,12 @@
           title="City"
           class="form-control form-control-lg"
           id="inputCity"
-          value="<?php echo isset($_POST['city']) ? $city : ''; ?>"
+          value="<?php echo isset($_POST['city']) ? $city : 'Miami'; ?>"
           >
         </div>
         <!-- STATE -->
         <div class="form-group col-md-4">
-          <label for="inputState" class="font-weight-bold">State</label>
+          <label for="inputState" class="font-weight-bold">State <span class="red-asterisk">&#42;</span></label>
           <select
           id="inputState"
           name="state"
@@ -202,7 +228,7 @@
         </div>
         <!-- POSTAL CODE -->
         <div class="form-group col-md-2">
-          <label for="inputPostal_code" class="font-weight-bold">Postal Code</label>
+          <label for="inputPostal_code" class="font-weight-bold">Postal Code <span class="red-asterisk">&#42;</span></label>
           <input
           type="text"
           name="postal_code"
@@ -218,7 +244,7 @@
         <div class="form-row">
           <!-- PHONE -->
         <div class="form-group col-md-6">
-          <label for="inputPhone" class="font-weight-bold">Phone</label>
+          <label for="inputPhone" class="font-weight-bold">Phone <span class="red-asterisk">&#42;</span></label>
           <input
           type="tel"
           name="phone"
@@ -233,7 +259,7 @@
         </div>
         <!-- DISTANCE  | 5K AS DEFAULT VALUE -->
         <div class="form-group col-md-6">
-          <label for="inputRun" class="font-weight-bold">Distance</label>
+          <label for="inputRun" class="font-weight-bold">Distance <span class="red-asterisk">&#42;</span></label>
           <select
           id="inputRun"
           name="distance"
@@ -248,14 +274,14 @@
           </select>
         </div>
       </div>
-      <div class="row justify-content-end mt-4 px-4">
+      <div class="row justify-content-end my-3 px-4">
         <a
           href="refer.php"
           name="refer"
           data-toggle="tooltip"
           data-placement="top"
           title="Refer A Friend!!! Let them join you on the adventure!"
-          class="btn btn-success col-md-2"
+          class="btn btn-lg bg-orange col-12"
           role="button">Refer A Friend!!!</a>
       </div>
       <div class="row mt-4 justify-content-between px-4 pt-1 pb-2">
