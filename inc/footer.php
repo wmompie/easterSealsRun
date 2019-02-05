@@ -4,7 +4,7 @@
         <div class=" col-sm-12 text-center">
           <h4>Easterseals</h4>
           <p>
-            16105 Schaefer Pike, Pompano Beach, Florida 33060 | 800-221-6827 (toll-free) Easterseals and its affiliate
+            16105 Schaefer Pike, Pompano Beach, Florida 33060 | <i class="fas fa-phone-volume"></i> <a href="tel:800-221-6827">800-221-6827</a> (toll-free) Easterseals and its affiliate
             organizations are 501(c)(3) nonprofit organizations.
           </p>
           <p>
