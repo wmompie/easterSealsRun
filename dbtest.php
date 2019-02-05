@@ -1,4 +1,4 @@
-<?php require_once('inc/dbuser.php'); ?>
+<?php require 'config/dbuser.php';?>
 
 <!DOCTYPE html>
 <html lang="en">
