@@ -33,7 +33,8 @@ if (filter_has_var(INPUT_POST, 'submit_refer')) {
                 $subject = "Refer-A-Friend Email for Easterseals Run";
                 $body = '<h2>You have  been invited to an Easterseals Run by a friend using the Refer-A-Friend!</h2>
                     <h4>From: ' . $from_email . '</h2>
-                    <h4>Message: </h4><p>' . $message . '</p>';
+                    <h4>Message: </h4><p>' . $message . '</p>
+                    <a href="http://wmompie.mydevryportfolio.com/easterseals">Easeterseals Website</a>';
 
                 // EMAIL HEADERS
                 $headers = "MIME-Version: 1.0" . "\r\n";
