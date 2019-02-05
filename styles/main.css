@@ -127,21 +127,21 @@ hr {
   letter-spacing: 0.1rem;
 }
 
-#sidebar a {
+#social-bar a {
   text-decoration: none;
   vertical-align: middle;
   text-align: center;
   /* line-height: 3; */
 }
 
-#sidebar p {
+#social-bar p {
   color: white;
   position: relative;
   left: -10px;
   padding-top: 10px;
 }
 
-#sidebar {
+#social-bar {
   height: 250px;
   width: 10px;
   position: fixed;
@@ -152,7 +152,7 @@ hr {
   z-index: 1000;
 }
 
-#sidebar p i {
+#social-bar p i {
   left: 30px;
   position: relative;
   vertical-align: middle;
@@ -229,6 +229,22 @@ hr {
   #regis-event-img {
     max-width: 400px;
     max-height: 250px;
+  }
+
+  #social-bar {
+    height: 230px;
+    width: 8px;
+    top: 150px;
+    padding: 5px;
+    margin-left: 1px;
+  }
+
+  #social-bar p i {
+    left: 25px;
+  }
+
+  #social-bar p {
+    left: 0;
   }
 }
 
