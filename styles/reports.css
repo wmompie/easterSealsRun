@@ -1,0 +1,106 @@
+body {
+  background: #f3f3f3;
+}
+
+#logout {
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #2e2e2e;
+}
+
+h3 {
+  letter-spacing: 0.15rem;
+}
+
+.form-row {
+  padding: 0;
+}
+
+.input-group-text {
+  background: #f3f3f3;
+  border: none;
+}
+
+input[type='radio'] {
+  margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left: 20px;
+}
+
+.input-group-prepend {
+  display: inline-block;
+}
+
+label,
+#sort-button {
+  font-size: 1.125rem;
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+}
+
+thead {
+  background: rgba(248, 150, 3, 0.6);
+}
+
+thead th {
+  font-size: 1.125rem;
+  letter-spacing: 0.15rem;
+}
+
+/* //////////////// MEDIA QUERIES //////////////// */
+
+/* small */
+@media (max-width: 767px) {
+  h1 {
+    font-size: 1.65rem;
+  }
+
+  h2 {
+    font-size: 3.5rem !important;
+  }
+}
+
+/* extra small */
+@media (max-width: 575px) {
+  h2 {
+    font-size: 3rem !important;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  input[type='radio'] {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    margin-left: 20px;
+  }
+
+  input#member_id {
+    margin-left: 20px;
+  }
+
+  label {
+    font-size: 1rem;
+    font-weight: normal;
+    letter-spacing: 0;
+  }
+
+  #sort-button {
+    font-size: 1rem;
+  }
+
+  thead th {
+    font-size: 1rem;
+    letter-spacing: 0;
+  }
+}
