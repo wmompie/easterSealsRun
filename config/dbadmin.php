@@ -2,6 +2,7 @@
 
 // CREATE CONNECTION
 $conn = mysqli_connect('localhost', 'wmompiem_admin', 'secretpassword', 'wmompiem_localrun');
+// $conn = mysqli_connect('localhost', 'root', '', 'localrun');
 
 // CHECK CONNECTION
 if (mysqli_connect_errno()) {
