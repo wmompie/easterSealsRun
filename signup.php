@@ -270,7 +270,7 @@ if (filter_has_var(INPUT_POST, 'submit_registration')) {
           >
             <option value="1m">1 Mile</option>
             <option selected>5K</option>
-            <option value="10k">10K</option>
+            <option value="10K">10K</option>
           </select>
         </div>
       </div>
