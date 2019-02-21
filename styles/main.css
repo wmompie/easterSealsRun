@@ -1,3 +1,7 @@
+body {
+  box-sizing: border-box;
+}
+
 #logo {
   height: 32px;
   width: auto;
@@ -218,7 +222,7 @@ hr {
   #home-sidebar {
     border-left: none !important;
     margin-top: 1.5rem;
-    border-top: 1px solid rgb(222, 226, 230);
+    border-top: 1px solid #dee2e6;
     padding-top: 2.5rem;
   }
 
